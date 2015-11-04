@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour {
 	void Start() {
 		rb = GetComponent<Rigidbody> ();
 		count = 0;
+		countText.text = "Count:" + count.ToString();
 	}
 
 	void FixedUpdate() 
