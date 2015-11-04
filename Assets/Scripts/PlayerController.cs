@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour {
 	void Start() {
 		rb = GetComponent<Rigidbody> ();
 		count = 0;
-		countText.text = "Count:" + count.ToString();
+		SetCountText ();
 	}
 
 	void FixedUpdate() 
@@ -31,10 +31,11 @@ public class PlayerController : MonoBehaviour {
 		{
 			other.gameObject.SetActive(false);
 			count = count + 1;
+			SetCountText();
 		}
-
-
-
+	}
+	void SetCountText(){
+		countText.text = "Count:" + count.ToString();
 	}
 
 }
